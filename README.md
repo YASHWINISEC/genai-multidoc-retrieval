@@ -72,8 +72,8 @@ def ask_question(query, top_k=1):
     query_embedding = embedder.encode([query], convert_to_numpy=True)
     distances, indices = index.search(query_embedding, top_k)
     for i in indices[0]:
-        print(f"\n🔍 Matched file: {file_names[i]}")
-        print(f"📄 Content snippet: {documents[i][:500]}...\n")
+        print(f"\n Matched file: {file_names[i]}")
+        print(f"Content snippet: {documents[i][:500]}...\n")
 
 ask_question("Summarize the main points.")
 ```
